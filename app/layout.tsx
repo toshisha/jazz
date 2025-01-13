@@ -1,4 +1,14 @@
 import './globals.css'
+import { inter } from './fonts'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'jazz by mafwbh',
+  description: 'jazz?',
+  icons: {
+    icon: '/icon.png',
+  },
+}
 
 export default function RootLayout({
   children,
@@ -6,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body style={{ fontFamily: 'Helvetica, sans-serif' }}>{children}</body>
+    <html lang="en" className={inter.className}>
+      <body>{children}</body>
     </html>
   )
 }
